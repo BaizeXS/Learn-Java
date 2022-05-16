@@ -24,8 +24,8 @@ public class SQLxsTest {
     public static void xs() {
         // 学生表添加数据语句
         System.out.println("学生表添加数据语句");
-        int xh = 200000;
-        for (int i = 0; i < 50; i++ ) {
+        int xh = 200100;
+        for (int i = 70; i < 120; i++ ) {
             xh++;
             int index = (int) (Math.random() * (sMing.length-1)) + 1;
             String name = lastName[i] + sMing[index];
@@ -36,15 +36,15 @@ public class SQLxsTest {
             int day = (int) (Math.random() * 28) + 1;
             int ydh = (int) (Math.random() * 9) + 1;
             int bj = 63012000 + (int) (Math.random() * 50) + 1;
-            System.out.println("INSERT INTO xs values('" + name + "','" + xh + "','" + gender + "','" + year + "-" + month + "-" + day + "','" + ydh + "','" + bj + "');");
+            System.out.println("INSERT INTO public.xs values('" + name + "','" + xh + "','" + gender + "','" + year + "-" + month + "-" + day + "','" + ydh + "','" + bj + "');");
         }
     }
     public static void js() {
         // 教师表添加数据
         System.out.println("教师表添加数据语句：");
         String[] zcb = {"教授","副教授","讲师","助教"};
-        int jsbh = 100000;
-        for (int i = 50; i < 70; i++ ) {
+        int jsbh = 100020;
+        for (int i = 120; i < 200; i++ ) {
             jsbh++;
             int index = (int) (Math.random() * (sMing.length-1)) + 1;
             String name = lastName[i] + sMing[index];
@@ -79,8 +79,8 @@ public class SQLxsTest {
 
     public static void main(String[] args) {
         xs();
-        js();
-        kc();
+//        js();
+//        kc();
 
     }
 }
